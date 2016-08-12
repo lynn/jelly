@@ -2216,7 +2216,7 @@ str_chrpair = '⁾..'
 str_realdec = '(?:0|-?\d*\.\d*|-?\d+|-)'
 str_realnum = str_realdec.join(['(?:', '?ȷ', '?|', ')'])
 str_complex = str_realnum.join(['(?:', '?ı', '?|', ')'])
-str_literal = '(?:%s)' % '|'.join([str_strings, str_ascistr, str_charlit, str_chrpair])
+str_literal = '(?:%s)' % '|'.join([str_strings, str_ascistr, str_charlit, str_chrpair, str_complex])
 str_litlist = '\[*' + str_literal + '(?:(?:\]*,\[*)' + str_literal + ')*' + '\]*'
 str_nonlits = '|'.join(map(re.escape, list(atoms) + list(quicks) + list(hypers)))
 
