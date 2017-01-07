@@ -1726,7 +1726,7 @@ atoms = {
 	'ÆĊ': attrdict(
 		arity = 1,
 		ldepth = 0,
-		call = sympy.functions.combinatorial.numbers.catalan
+		call = lambda z: int(sympy.functions.combinatorial.numbers.catalan(z))
 	),
 	'Æc': attrdict(
 		arity = 1,
@@ -1786,12 +1786,12 @@ atoms = {
 	'ÆḞ': attrdict(
 		arity = 1,
 		ldepth = 0,
-		call = sympy.functions.combinatorial.numbers.fibonacci
+		call = lambda z: int(sympy.functions.combinatorial.numbers.fibonacci(z))
 	),
 	'ÆĿ': attrdict(
 		arity = 1,
 		ldepth = 0,
-		call = sympy.functions.combinatorial.numbers.lucas
+		call = lambda z: int(sympy.functions.combinatorial.numbers.lucas(z))
 	),
 	'Æl': attrdict(
 		arity = 1,
