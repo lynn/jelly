@@ -955,6 +955,9 @@ def shift_right(number, bits):
 		return number >> bits
 	return div(number, 2 ** bits, floor = True)
 
+def shift_right_no_floor(number, bits):
+	return div(number, 2 ** bits, floor = False)
+
 def shuffle(array):
 	array = iterable(array, make_copy = True, make_range = True)
 	random.shuffle(array)
@@ -2578,6 +2581,12 @@ atoms = {
 		ldepth = 0,
 		rdepth = 0,
 		call = shift_right
+	),
+	'æ⁾': attrdict(
+		arity = 2,
+		ldepth = 0,
+		rdepth = 0,
+		call = shift_right_no_floor
 	),
 	'œ!': attrdict(
 		arity = 2,
