@@ -2582,7 +2582,7 @@ atoms = {
 		rdepth = 0,
 		call = shift_right
 	),
-	'æ⁾': attrdict(
+	'æH': attrdict(
 		arity = 2,
 		ldepth = 0,
 		rdepth = 0,
