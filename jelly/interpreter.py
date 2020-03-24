@@ -3020,13 +3020,13 @@ quicks = {
 			call = lambda x, y = None: list(filter(lambda t: variadic_link(links[0], (t, y)), iterable(x, make_range = True)))
 		)]
 	),
-  'Ƙ': attrdict(
-    condition = lambda links: links,
-    quicklink = lambda links, outmost_links, index: [attrdict(
-      arity = 2,
-      call = lambda x, y: list(filter(lambda t: monadic_link(links[0], t) == y, iterable(x, make_range = True)))
-    )]
-  ),
+	'Ƙ': attrdict(
+		condition = lambda links: links,
+		quicklink = lambda links, outmost_links, index: [attrdict(
+			arity = 2,
+			call = lambda x, y: list(filter(lambda t: monadic_link(links[0], t) == y, iterable(x, make_range = True)))
+		)]
+	),
 	'Ðḟ': attrdict(
 		condition = lambda links: links,
 		quicklink = lambda links, outmost_links, index: [attrdict(
