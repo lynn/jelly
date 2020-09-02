@@ -266,6 +266,12 @@ def from_diagonals(diagonals):
 		shift -= 1
 	return zip_ragged(diagonals)
 
+def from_exponent_pairs(exponent_pairs):
+	product = 1
+	for base, exponent in exponent_pairs:
+		product *= base ** exponent
+	return product
+
 def from_exponents(exponents):
 	integer = 1
 	for index, exponent in enumerate(exponents):
@@ -2235,6 +2241,11 @@ atoms = {
 		arity = 1,
 		ldepth = 0,
 		call = lambda z: len(sympy.ntheory.factor_.factorint(z))
+	),
+	'Æ*': attrdict(
+		arity = 1,
+		ldepth = 2,
+		call = from_exponent_pairs
 	),
 	'Æ²': attrdict(
 		arity = 1,
